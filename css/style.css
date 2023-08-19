@@ -1,0 +1,682 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--contact-bgc);
+}
+::-webkit-scrollbar-track{
+    background: var(--black-text-color);
+}
+:root{
+    --footer-bgc:#E7F5F8;
+    --contact-bgc:#F2F8FC;
+    --black-text-color:#22262A;
+    --red-text-color:#CF2929;
+    --gray-color:#FAFAFA;
+    --white-text-color:#ffffff;
+}
+html{
+    font-size: 10px;
+}
+
+/*  *header section design */
+header{
+    width: 100%;
+    min-height: 10vh;
+    padding: 2rem;
+}
+header .container{
+    width: 80%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container .logo h1{
+    color: var(--black-text-color);
+    font-weight: bold;
+    font-size: 2.9rem;
+}
+header .container nav {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    color: var(--black-text-color);
+    font-size: 1.8rem;
+}
+header .container nav a{
+    color: var(--black-text-color);
+    font-size: 1.5rem;
+    transition: .5s;
+}
+header .container nav a:hover{
+    color: var(--red-text-color);
+}
+header .container i{
+    font-weight: bold;
+    padding: 1.5rem;
+    background-color: blanchedalmond;
+    color: #000000;
+    display: none;
+    font-size: 2rem;
+}
+
+@media (max-width:992px) {
+    header .container nav{
+        position: absolute;
+        top: 10%;
+        left: 0%;
+        right: 0%;
+        background-color: #000000;
+        border: 1px solid blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 1rem;
+        z-index: 100000;
+        display: none;
+    }
+    header .container nav a{
+        background-color: #000000;
+        color: var(--white-text-color);
+        border: 1px solid #ffffff;
+        width: 100%;
+        padding: 2rem;
+    }
+    header .container i{
+        display: block;
+    }
+}
+@media (max-width:500px){
+    html{
+        font-size: 7px;
+    }
+}
+/*  /header section design */
+
+
+/*  *main section design */
+main{
+    width: 100%;
+    min-height: 90vh;
+    background: url(../imgs/main-bgi.png) center no-repeat;
+    background-size: cover;
+    padding: 5rem;
+}
+main .container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+main .container .content{
+    position: absolute;
+    right: 0;
+    margin-top: 30rem;
+}
+main .container .content h6{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--black-text-color);
+}
+main .container .content h1{
+    font-size: 7rem;
+    color: var(--black-text-color);
+    font-weight: bold;
+}
+main .container .content p{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--black-text-color);
+    margin-bottom: 1.5rem;
+}
+main .container .content .btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+main .container .content .btns a{
+    font-size: 1.8rem;
+    color: var(--white-text-color);
+    padding: 1rem 2rem;
+    background-color: var(--black-text-color);
+    transition: .5s;
+}
+main .container .content .btns a:hover{
+    background-color: transparent;
+    color: var(--black-text-color);
+}
+
+@media (max-width:1200px) {
+    ::-webkit-scrollbar{
+        width: 0px;
+    }
+    main{
+        background: none;
+        background-color: var(--footer-bgc);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 40vh;
+    }
+    main .container .content{
+        position: static;
+        margin-top: 0rem;
+    }
+}
+
+@media (max-width:500px){
+    html{
+        font-size: 6.5px;
+    }
+}
+@media (max-width:380px){
+    main .container .content h1{
+        font-size: 5rem;
+    }
+}
+/*  /main section design */
+
+
+/*  *catogeries section design */
+.catogeries{
+    margin-top: 5rem;
+    width: 100%;
+    min-height: 20vh;
+    padding: 5rem;
+    padding-bottom: 0;
+}
+.catogeries .container{
+    width: 80%;
+    height: 100%;
+    margin-left: auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.catogeries .container .catogary1{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+.catogeries .container .catogary2{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.catogeries .container .catogary3{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+.catogeries .container .catogary4{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.catogeries .container .catogary{
+    position: relative;
+    transition: .5s;
+}
+.catogeries .container .catogary img{
+    height: 100%;
+    width: 100%;
+}
+.catogeries .container .catogary .describe{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
+    bottom: 0;
+    background-color: #22262a83;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    display: none;
+}
+.catogeries .container .catogary .describe a{
+    background-color: var(--gray-color);
+    color: var(--black-text-color);
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+}
+@keyframes move{
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.catogeries .container .catogary:hover .describe{
+    display: flex;
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    animation: move 1s;
+    animation-fill-mode: forwards;
+}
+
+@media (max-width:1200px) {
+    .catogeries .container{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
+    }
+    .catogeries .container .catogary img{
+        object-fit: cover;
+    }
+    .catogeries .container .catogary{
+        flex-grow: 1;
+    }
+}
+/*  /catogeries section design */
+
+/* *womens section design */
+.womens{
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 50vh;
+}
+.womens .container{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.womens .container .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+.womens .container .title h4{
+    font-size: 2rem;
+    color: var(--black-text-color);
+    font-weight: bold;
+}
+.womens .container .title p{
+    font-size: 1.5rem;
+    color: var(--black-text-color);
+    font-weight: 300;
+}
+.womens .container .pictures{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.womens .container .pictures .catogary {
+    position: relative;
+    flex-grow: 1;
+}
+.womens .container .pictures .catogary img{
+    height: 100%;
+    width: 100%;
+}
+.womens .container .pictures .catogary .describe{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
+    bottom: 0;
+    background-color: #22262a83;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.womens .container .pictures .catogary .describe h5{
+    font-size: 1.2rem;
+    color: var(--white-text-color);
+}
+.womens .container .pictures .catogary .describe h6{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white-text-color);
+}
+.womens .container .pictures .catogary .describe p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--white-text-color);
+}
+.womens .container .pictures .catogary .describe span{
+    color: var(--red-text-color);
+}
+@keyframes move{
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.womens .container .pictures .catogary:hover .describe{
+    display: flex;
+    animation: move 1s;
+    animation-fill-mode: forwards;
+}
+/* /womens section design */
+
+/* *mens section design */
+.womens{
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 50vh;
+}
+.womens .container{
+    width: 70%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.womens .container .title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 4rem;
+}
+.womens .container .title h4{
+    font-size: 2rem;
+    color: var(--black-text-color);
+    font-weight: bold;
+}
+.womens .container .title p{
+    font-size: 1.5rem;
+    color: var(--black-text-color);
+    font-weight: 300;
+}
+.womens .container .pictures{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+.womens .container .pictures .catogary {
+    position: relative;
+    flex-grow: 1;
+}
+.womens .container .pictures .catogary img{
+    height: 100%;
+    width: 100%;
+}
+.womens .container .pictures .catogary .describe{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 100%;
+    bottom: 0;
+    background-color: #22262a83;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.womens .container .pictures .catogary .describe h5{
+    font-size: 1.2rem;
+    color: var(--white-text-color);
+}
+.womens .container .pictures .catogary .describe h6{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--white-text-color);
+}
+.womens .container .pictures .catogary .describe p{
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--white-text-color);
+}
+.womens .container .pictures .catogary .describe span{
+    color: var(--red-text-color);
+}
+@keyframes move{
+    0%{
+        top: 100%;
+    }
+    100%{
+        top: 0%;
+    }
+}
+.womens .container .pictures .catogary:hover .describe{
+    display: flex;
+    animation: move 1s;
+    animation-fill-mode: forwards;
+}
+/* /mens section design */
+
+
+/* *shop section design */
+.shop{
+    width: 100%;
+    min-height: 100vh;
+    background: url(../imgs/shop-bgi.png) center no-repeat;
+    background-size: cover;
+    margin-top: 8rem;
+    padding: 5rem;
+}
+.shop .container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+}
+.shop .container .content{
+    margin-top: 50rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.shop .container .content h6{
+    font-size: 2.8rem;
+    color: var(--black-text-color);
+    font-weight: 390;
+}
+.shop .container .content h1{
+    font-size: 7rem;
+    color: var(--black-text-color);
+    font-weight: bold;
+}
+.shop .container .content .btn a{
+    background-color: var(--black-text-color);
+    color: var(--white-text-color);
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    width: fit-content;
+    transition: .5s;
+}
+.shop .container .content .btn a:hover{
+    background-color: transparent;
+    color: var(--black-text-color);
+}
+
+@media (max-width:1300px) {
+    .shop{
+        background: none;
+        background-color: aquamarine;
+        max-height: 10vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+    }
+    .shop .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .shop .container .content{
+        margin-top: 0;
+        text-align: center;
+    }
+    .shop .container .content h1{
+        font-size: 6rem;
+    }
+    .shop .container .content .btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media (max-width:350px) {
+    .shop .container .content .btn a{
+        font-size: 1.4rem;
+    }
+}
+/* /shop section design */
+
+/* *contact section design */
+.contact{
+    width: 100%;
+    min-height: 50vh;
+    padding: 10rem;
+    background-color: var(--contact-bgc);
+}
+.contact .container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    flex-wrap: wrap;
+}
+.contact .container .logo{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact .container .logo h2{
+    font-size: 2.2rem;
+    color: var(--black-text-color);
+    font-weight: bold;
+}
+.contact .container .logo p{
+    font-size: 1.5rem;
+    color: var(--black-text-color);
+    font-weight: 350;
+}
+.contact .container .email{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact .container .email form{
+    display: flex;
+    position: relative;
+}
+.contact .container .email form input{
+    width:100%;
+    padding: 1rem 6rem;
+}
+.contact .container .email form input::placeholder{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--black-text-color);
+}
+.contact .container .email form button{
+    position: absolute;
+    border: none;
+    outline: none;
+    right: 10%;
+    top: 25%;
+    background-color: transparent;
+    cursor: pointer;
+}
+.contact .container .info{
+   font-size: 1.5rem;
+   color: var(--black-text-color);
+   font-weight: 300;
+   display: flex;
+   flex-direction: column;
+   gap: 2rem;
+}
+.contact .container .navigations{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+.contact .container .navigations nav {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.contact .container .navigations nav h6{
+    font-size: 2.2rem;
+    font-weight: 350;
+    color: var(--black-text-color);
+    margin-bottom: 1rem;
+}
+.contact .container .navigations nav a{
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--black-text-color);
+    transition: .5s;
+}
+.contact .container .navigations nav a:hover{
+    color: var(--red-text-color);
+}
+
+@media (max-width:400px) {
+    /* .contact .container .email form input{
+        width:100%;
+        padding: 1rem 9rem;
+    } */
+    .contact .container .email form button{
+        font-size: 1rem;
+        top: 40%;
+    }
+}
+/* /contact section design */
+
+/* *footer section design */
+footer{
+    background-color: var(--footer-bgc);
+    width: 100%;
+    min-height: 10vh;
+    padding: 5rem;
+}
+footer .container{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .container p{
+    font-size: 2rem;
+    color: #000000;
+    text-align: center;
+}
+/* /footer section design */
